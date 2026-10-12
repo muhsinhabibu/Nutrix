@@ -83,8 +83,7 @@ if (contactForm) contactForm.addEventListener("submit", (event) => {
     `Name: ${name}\nEmail: ${email}\n\n${message}`
   );
 
-  // Replace with your chosen public professional email.
-  const recipient = "YOUR_EMAIL@example.com";
+  const recipient = "muhsinhabibu20@gmail.com";
 
   result.innerHTML = "";
 

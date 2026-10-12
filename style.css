@@ -280,6 +280,30 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+.service-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.service-link:hover,
+.service-link:focus-visible {
+  background: #1b5e20;
+}
+
 .tool-form {
   display: grid;
   gap: 10px;
@@ -322,6 +346,196 @@ nav a:hover {
   margin-top: 16px;
   font-size: 0.88rem;
   color: var(--muted);
+}
+
+.research-card {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.research-image {
+  width: 128px;
+  height: 174px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.research-content h3 {
+  margin: 4px 0;
+  font-size: 1.4rem;
+}
+
+.research-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #d9f1e3;
+  color: #187443;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.research-meta,
+.research-details-content {
+  color: var(--muted);
+}
+
+.research-description {
+  margin-top: 8px;
+  font-size: 1.08rem;
+}
+
+.research-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.research-fact {
+  display: grid;
+  gap: 4px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.research-fact span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.research-fact strong {
+  color: var(--text);
+}
+
+.research-details {
+  margin-top: 4px;
+}
+
+.research-details > summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #303030;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.research-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-details > summary:hover,
+.research-details > summary:focus-visible {
+  background: #444;
+}
+
+.research-details > .project-button {
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: none;
+}
+
+.research-details > .project-button:hover,
+.research-details > .project-button:focus-visible {
+  background-color: #2e7d32;
+}
+
+.research-details-content {
+  padding: 14px 4px 0;
+}
+
+.research-details-content h4 {
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.research-detail-section + .research-detail-section {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.research-topic summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.research-topic summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-topic summary::after {
+  content: "+";
+  color: var(--green);
+  font-size: 1.2rem;
+}
+
+.research-topic[open] > summary::after {
+  content: "−";
+}
+
+.research-topic summary:hover,
+.research-topic summary:focus-visible {
+  border-color: #a8c4b3;
+  background: var(--green-light);
+}
+
+.research-topic-content {
+  padding: 12px;
+}
+
+.research-topic-content h4 {
+  margin: 12px 0 4px;
+  color: var(--text);
+}
+
+.research-topic-content h4:first-child {
+  margin-top: 0;
+}
+
+.research-topic-content p + p {
+  margin-top: 10px;
+}
+
+.research-topic-content ul {
+  display: grid;
+  gap: 8px;
+  margin: 6px 0 0 20px;
+}
+
+.research-document-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 9px 15px;
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.research-document-button:hover,
+.research-document-button:focus-visible {
+  background: #245b4d;
 }
 
 footer {
@@ -438,6 +652,15 @@ footer .logo {
 
   .tool-cards {
     grid-template-columns: 1fr;
+  }
+
+  .research-card {
+    grid-template-columns: 1fr;
+  }
+
+  .research-image {
+    width: 100%;
+    height: 190px;
   }
 
   .footer-bottom {
